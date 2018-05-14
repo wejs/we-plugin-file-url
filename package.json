@@ -1,0 +1,38 @@
+{
+  "name": "we-plugin-file-url",
+  "description": "We.js file plugin that add support for save file record with custom external url",
+  "version": "0.0.0",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo 'TODO!'"
+  },
+  "dependencies": {
+    "request": "^2.85.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "wejs-plugin",
+    "storage"
+  ],
+  "files": [
+    "files/public",
+    "lib",
+    "locales",
+    "server",
+    "install.js",
+    "plugin.js"
+  ],
+  "repository": "wejs/we-plugin-file-url",
+  "author": "Alberto Souza <contato@albertosouza.net>",
+  "license": "MIT",
+  "wejs": {
+    "dependencies": {
+      "we-plugin-file": true
+    },
+    "plugins": {
+      "we-plugin-file": true,
+      "we-plugin-user": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div aria-hidden="true" class="modal" id="urlSelectorFormModal">
+  <div class="modal-dialog modal-lg audio-selector-modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">{{t 'url.selector'}}</h4>
+      </div>
+      <div class="modal-body">
+        <div class="url-uploader-messages"></div>
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#audioUrlUploadTab" aria-controls="audioUrlUploadTab" role="tab" data-toggle="tab">{{t 'audio.url.uploader.title'}}</a></li>
+    <li role="presentation"><a href="#audioUploadTab" aria-controls="audioUploadTab" role="tab" data-toggle="tab">{{t 'audio.uploader.title'}}</a></li>
+  </ul>
+  <div class="tab-content">
+    <br>
+    <div role="tabpanel" class="tab-pane active" id="audioUrlUploadTab">
+      <form class="upload-audio-url" name="form-upload-audio-url">
+        <span class="form-controll urlinput-button">
+          <span class="glyphicon glyphicon-plus"></span>
+          <label for="file-upload-audio-url-field">{{t 'audio.url.selector.btn'}}</label>
+          <input id="file-upload-audio-url-field" class="form-control url-uploader" placeholder="http://..." type="url" name="audioUrl">
+          <p class="help-block">Use o campo acima para adicionar audios alvos em sistemas externos como o SoundCloud.</p>
+          <button onclick="return we.components.audioSelector.submitUrl();" class="file-upload-audio-url-submit btn btn-default" type="button">Salvar</button>
+        </span>
+      </form>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="audioUploadTab">
+      <span class="btn btn-success fileinput-button">
+        <span class="glyphicon glyphicon-plus"></span>
+        <label for="file-upload-audio-field">{{t 'audio.upload.selector.btn'}}</label>
+        <input id="file-upload-audio-field" class="audioupload fileupload" type="file" data-url="/api/v1/audio" name="audio" accept="audio/*">
+      </span>
+
+      <br>
+      <br>
+      <div class="progress" style="display:none;">
+        <div class="progress-bar progress-bar-success"></div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>

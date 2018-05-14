@@ -1,0 +1,11 @@
+test
+files/uploads
+.jscsrc
+.jshintignore
+.jshintrc
+.travis.yml
+.gitignore
+*.log
+config
+yarn-error.lock
+yarn.lock
