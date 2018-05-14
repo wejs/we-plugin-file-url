@@ -5,7 +5,7 @@
 (function (we) {
 
 we.components.urlSelector = {
-  addUrl(eid, name) {
+  addUrl: function(eid, name) {
     var self = this;
     var element = $(eid+'-fs');
     var url = element.val();
