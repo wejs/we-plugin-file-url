@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo 'TODO!'"
   },
-  "dependencies": {
-    "request": "^2.85.0",
-    "uuid": "^3.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "keywords": [
     "wejs-plugin",
