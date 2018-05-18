@@ -200,7 +200,6 @@ module.exports = function Model (we) {
         if (opts.raw || !r.setDataValue) return resolve();
 
         const fields = we.file.url.getModelFields(this);
-        console.log('>>fields>>', fields);
 
         if (!fields) {
           return resolve();
@@ -209,17 +208,12 @@ module.exports = function Model (we) {
         const fieldNames = Object.keys(fields);
         async.eachSeries(fieldNames,  (fieldName, nextField)=> {
 
-          console.log('>>opts.fields1>>>', opts.fields);
-          console.log('>>opts.fields2>>>', fieldName);
-
           // check if user want update this field
           if (opts.fields.indexOf(fieldName) === -1) return nextField();
 
           let urlsToSave = _.clone(r.get(fieldName));
           let newurlassocs = [];
           let newurlassocsIds = [];
-
-          console.log('>>urlsToSave>>>>', urlsToSave);
 
           async.series([
             function findOrCreateAllAssocs (done) {
@@ -243,10 +237,6 @@ module.exports = function Model (we) {
                     done();
                     return null;
                   }
-
-                  console.log('>>>', {
-                    where: values, defaults: values
-                  });
 
                   // find of create the assoc
                   return db.models.urlassoc
