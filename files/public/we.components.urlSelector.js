@@ -14,6 +14,7 @@ we.components.urlSelector = {
       this.saveUrlDataInBackend({
         url: url.trim()
       }, function(err, result) {
+        $(name+'-selector').val('');
         self.showFieldData(eid, name, result);
       });
     }
@@ -34,7 +35,7 @@ we.components.urlSelector = {
   },
 
   removeUrl: function(e, selector) {
-    if (confirm('Tem certeza que deseja remover esse audio?')) {
+    if (confirm('Tem certeza que deseja remover esse conteúdo?')) {
       var tbody = $(e).parent().parent().parent();
       $(e).parent().parent().remove();
       if (!tbody.find('tr').length) {

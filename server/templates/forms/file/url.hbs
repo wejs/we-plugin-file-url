@@ -32,7 +32,7 @@
           <tr>
             <td>{{url}}</td>
             <td>
-              <button onclick="we.components.audioSelector.removeUrl(this, '#{{../fieldId}}')" type="button" class="btn btn-danger">{{t 'url.remove'}}</button>
+              <button onclick="we.components.urlSelector.removeUrl(this, '#{{../fieldId}}')" type="button" class="btn btn-danger">{{t 'url.remove'}}</button>
               <input name="{{../name}}" type="hidden" value="{{id}}">
             </td>
           </tr>
@@ -42,7 +42,7 @@
                <we-file-description data-id="{{this}}"></we-file-description>
             </td>
             <td>
-              <button onclick="we.components.audioSelector.removeUrl(this, '#{{../fieldId}}')" type="button" class="btn btn-danger">{{t 'url.remove'}}</button>
+              <button onclick="we.components.urlSelector.removeUrl(this, '#{{../fieldId}}')" type="button" class="btn btn-danger">{{t 'url.remove'}}</button>
               <input name="{{../name}}" type="hidden" value="{{this}}">
             </td>
           </tr>
