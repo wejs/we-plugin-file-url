@@ -14,7 +14,7 @@ we.components.urlSelector = {
       this.saveUrlDataInBackend({
         url: url.trim()
       }, function(err, result) {
-        $(name+'-selector').val('');
+        element.val('');
         self.showFieldData(eid, name, result);
       });
     }
