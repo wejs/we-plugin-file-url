@@ -1,7 +1,7 @@
 {
   "name": "we-plugin-file-url",
   "description": "We.js file plugin that add support for save file record with custom external url",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "plugin.js",
   "scripts": {
     "test": "echo 'TODO!'"
